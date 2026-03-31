@@ -91,17 +91,17 @@ Declencheurs :
 Comportement :
 
 - build Docker des images `backend` et `frontend` sur chaque PR et push
-- push sur Docker Hub uniquement pour les pushes sur `main`
+- push sur GHCR uniquement pour les pushes sur `main`
 - tags publies : `latest` et le SHA court du commit
 
-Secrets GitHub a configurer :
+Pre-requis GitHub :
 
-- `DOCKER_USERNAME`
-- `DOCKER_PASSWORD`
+- le workflow utilise `GITHUB_TOKEN`
+- le repo doit autoriser `GitHub Actions` a ecrire des packages
 
 Images publiees :
 
-- `docker.io/<DOCKER_USERNAME>/fastshop-backend:latest`
-- `docker.io/<DOCKER_USERNAME>/fastshop-backend:<sha>`
-- `docker.io/<DOCKER_USERNAME>/fastshop-frontend:latest`
-- `docker.io/<DOCKER_USERNAME>/fastshop-frontend:<sha>`
+- `ghcr.io/<owner>/fastshop-backend:latest`
+- `ghcr.io/<owner>/fastshop-backend:<sha>`
+- `ghcr.io/<owner>/fastshop-frontend:latest`
+- `ghcr.io/<owner>/fastshop-frontend:<sha>`

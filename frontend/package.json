@@ -30,6 +30,6 @@
     "vite": "^7.2.4"
   },
   "optionalDependencies": {
-    "@rollup/rollup-darwin-x64": "^4.60.0"
+    "@rollup/rollup-darwin-x64": "4.60.0"
   }
 }
